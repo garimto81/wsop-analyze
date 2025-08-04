@@ -1,7 +1,8 @@
-// 참가자 차트 생성
-const ctx = document.getElementById('participantChart');
-if (ctx) {
-    const participantChart = new Chart(ctx, {
+// 페이지가 완전히 로드된 후 차트 생성
+document.addEventListener('DOMContentLoaded', function() {
+    const ctx = document.getElementById('participantChart');
+    if (ctx && typeof Chart !== 'undefined') {
+        const participantChart = new Chart(ctx, {
         type: 'line',
         data: {
             labels: ['2021', '2022', '2023', '2024', '2025'],
@@ -35,7 +36,8 @@ if (ctx) {
             }
         }
     });
-}
+    }
+});
 
 // 부드러운 스크롤
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -99,34 +101,38 @@ function updateDashboard() {
     }
 }
 
-// 페이지 로드 시 대시보드 업데이트
-updateDashboard();
+// DOM 로드 후 대시보드 업데이트
+document.addEventListener('DOMContentLoaded', function() {
+    updateDashboard();
+});
 
 // 타임라인 애니메이션
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+document.addEventListener('DOMContentLoaded', function() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
 
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '0';
-            entry.target.style.transform = 'translateX(-20px)';
-            
-            setTimeout(() => {
-                entry.target.style.transition = 'all 0.6s ease-out';
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateX(0)';
-            }, 100);
-            
-            observer.unobserve(entry.target);
-        }
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '0';
+                entry.target.style.transform = 'translateX(-20px)';
+                
+                setTimeout(() => {
+                    entry.target.style.transition = 'all 0.6s ease-out';
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateX(0)';
+                }, 100);
+                
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.timeline-item').forEach(item => {
+        observer.observe(item);
     });
-}, observerOptions);
-
-document.querySelectorAll('.timeline-item').forEach(item => {
-    observer.observe(item);
 });
 
 // 네비게이션 활성화 표시

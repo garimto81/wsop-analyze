@@ -6,7 +6,7 @@
     <title>WSOP 메인 이벤트 방송 프로덕션 가이드</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 <body>
     <header>
@@ -51,7 +51,9 @@
                     <div class="overview-card">
                         <h3>대회 규모</h3>
                         <p>세계 최대 규모의 포커 토너먼트로, 매년 약 1만명의 참가자가 경쟁합니다.</p>
-                        <canvas id="participantChart"></canvas>
+                        <div style="position: relative; height: 250px; margin-top: 20px;">
+                            <canvas id="participantChart"></canvas>
+                        </div>
                     </div>
                     <div class="overview-card">
                         <h3>방송 특징</h3>
