@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSOP 메인 이벤트 방송 프로덕션 가이드</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">WSOP 프로덕션</div>
+            <ul class="nav-links">
+                <li><a href="#overview">개요</a></li>
+                <li><a href="#daily-analysis">일별 분석</a></li>
+                <li><a href="#production-plan">프로덕션 계획</a></li>
+                <li><a href="#equipment">장비 관리</a></li>
+                <li><a href="#checklist">체크리스트</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>WSOP 메인 이벤트 방송 프로덕션</h1>
+                <p class="subtitle">효율적인 방송 운영을 위한 종합 가이드</p>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <h3>2025년 참가자</h3>
+                        <p class="stat-number">9,735명</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>핵심 전환점</h3>
+                        <p class="stat-number">Day 5</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>방송 일수</h3>
+                        <p class="stat-number">10일</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="overview" class="section">
+            <div class="container">
+                <h2>WSOP 메인 이벤트 개요</h2>
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <h3>대회 규모</h3>
+                        <p>세계 최대 규모의 포커 토너먼트로, 매년 약 1만명의 참가자가 경쟁합니다.</p>
+                        <canvas id="participantChart"></canvas>
+                    </div>
+                    <div class="overview-card">
+                        <h3>방송 특징</h3>
+                        <p>Day 1-4: 분산형 무인 카메라 시스템<br>
+                           Day 5-10: 중앙집중형 유인 카메라 시스템</p>
+                    </div>
+                    <div class="overview-card">
+                        <h3>프로덕션 전환점</h3>
+                        <p>Day 5를 기점으로 방송 방식이 근본적으로 변화하며, 인원과 장비를 대폭 증강합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="daily-analysis" class="section">
+            <div class="container">
+                <h2>일별 참가자 분석</h2>
+                <div class="daily-timeline">
+                    <div class="timeline-item" data-day="1">
+                        <div class="timeline-header">
+                            <h3>Day 1</h3>
+                            <span class="participant-count">9,735명</span>
+                        </div>
+                        <div class="timeline-content">
+                            <p>대회 시작 - 최대 규모 참가자</p>
+                            <ul>
+                                <li>무인 카메라 30대 운영</li>
+                                <li>기본 프로덕션 팀 5명</li>
+                                <li>객관적 기록 중심</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-day="2">
+                        <div class="timeline-header">
+                            <h3>Day 2</h3>
+                            <span class="participant-count">~5,000명</span>
+                        </div>
+                        <div class="timeline-content">
+                            <p>첫 번째 대규모 탈락</p>
+                            <ul>
+                                <li>무인 카메라 유지</li>
+                                <li>프로덕션 팀 5명</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-day="3">
+                        <div class="timeline-header">
+                            <h3>Day 3</h3>
+                            <span class="participant-count">~1,500명</span>
+                        </div>
+                        <div class="timeline-content">
+                            <p>머니 버블 접근</p>
+                            <ul>
+                                <li>긴장감 고조 시점</li>
+                                <li>카메라 재배치 준비</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-day="4">
+                        <div class="timeline-header">
+                            <h3>Day 4</h3>
+                            <span class="participant-count">~500명</span>
+                        </div>
+                        <div class="timeline-content">
+                            <p>머니 인 달성</p>
+                            <ul>
+                                <li>Day 5 전환 준비</li>
+                                <li>장비 점검 및 테스트</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item highlight" data-day="5">
+                        <div class="timeline-header">
+                            <h3>Day 5 ⭐</h3>
+                            <span class="participant-count">~150명</span>
+                        </div>
+                        <div class="timeline-content">
+                            <p><strong>방송 전환점</strong></p>
+                            <ul>
+                                <li>유인 카메라 15대 투입</li>
+                                <li>프로덕션 팀 20명으로 증원</li>
+                                <li>스토리텔링 중심 방송</li>
+                                <li>실시간 해설 추가</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-day="6-9">
+                        <div class="timeline-header">
+                            <h3>Day 6-9</h3>
+                            <span class="participant-count">150명 → 9명</span>
+                        </div>
+                        <div class="timeline-content">
+                            <p>파이널 테이블 진출</p>
+                            <ul>
+                                <li>집중 방송 체제 유지</li>
+                                <li>선수별 스토리 개발</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-day="10">
+                        <div class="timeline-header">
+                            <h3>Day 10</h3>
+                            <span class="participant-count">9명 → 1명</span>
+                        </div>
+                        <div class="timeline-content">
+                            <p>파이널 테이블</p>
+                            <ul>
+                                <li>최고 수준 프로덕션</li>
+                                <li>특수 카메라 추가 투입</li>
+                                <li>라이브 스트리밍</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="production-plan" class="section">
+            <div class="container">
+                <h2>프로덕션 운영 계획</h2>
+                <div class="production-grid">
+                    <div class="production-phase">
+                        <h3>Phase 1: Day 1-4</h3>
+                        <div class="phase-details">
+                            <h4>기본 운영 체제</h4>
+                            <ul>
+                                <li><strong>인원:</strong> 5명 (PD 1, 엔지니어 2, 오퍼레이터 2)</li>
+                                <li><strong>카메라:</strong> 무인 고정 카메라 30대</li>
+                                <li><strong>목표:</strong> 효율적 기록 및 하이라이트 수집</li>
+                            </ul>
+                            <div class="cost-benefit">
+                                <p><strong>비용 효율성:</strong> ⭐⭐⭐⭐⭐</p>
+                                <p><strong>방송 품질:</strong> ⭐⭐⭐</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="production-phase highlight">
+                        <h3>Phase 2: Day 5-10</h3>
+                        <div class="phase-details">
+                            <h4>집중 방송 체제</h4>
+                            <ul>
+                                <li><strong>인원:</strong> 20명 (PD 2, 카메라맨 8, 엔지니어 4, 기타 6)</li>
+                                <li><strong>카메라:</strong> 유인 카메라 15대 + 특수 카메라 5대</li>
+                                <li><strong>목표:</strong> 드라마틱한 스토리텔링과 고품질 방송</li>
+                            </ul>
+                            <div class="cost-benefit">
+                                <p><strong>비용 효율성:</strong> ⭐⭐⭐</p>
+                                <p><strong>방송 품질:</strong> ⭐⭐⭐⭐⭐</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommendation-box">
+                    <h3>💡 스마트 프로덕션 전략</h3>
+                    <ol>
+                        <li><strong>사전 준비:</strong> Day 4에 모든 전환 준비 완료</li>
+                        <li><strong>단계적 증원:</strong> Day 5 새벽에 추가 인원 투입</li>
+                        <li><strong>하이브리드 운영:</strong> 일부 무인 카메라는 보조로 유지</li>
+                        <li><strong>유연한 대응:</strong> 참가자 수에 따라 인원 조정</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="equipment" class="section">
+            <div class="container">
+                <h2>장비 관리 계획</h2>
+                <div class="equipment-grid">
+                    <div class="equipment-category">
+                        <h3>카메라 시스템</h3>
+                        <table class="equipment-table">
+                            <thead>
+                                <tr>
+                                    <th>장비</th>
+                                    <th>Day 1-4</th>
+                                    <th>Day 5-10</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>무인 고정 카메라</td>
+                                    <td>30대</td>
+                                    <td>10대</td>
+                                </tr>
+                                <tr>
+                                    <td>유인 카메라</td>
+                                    <td>0대</td>
+                                    <td>15대</td>
+                                </tr>
+                                <tr>
+                                    <td>크레인/지미집</td>
+                                    <td>0대</td>
+                                    <td>2대</td>
+                                </tr>
+                                <tr>
+                                    <td>특수 카메라</td>
+                                    <td>0대</td>
+                                    <td>5대</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="equipment-category">
+                        <h3>기술 인프라</h3>
+                        <table class="equipment-table">
+                            <thead>
+                                <tr>
+                                    <th>시스템</th>
+                                    <th>Day 1-4</th>
+                                    <th>Day 5-10</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>스위처</td>
+                                    <td>기본형</td>
+                                    <td>고급형</td>
+                                </tr>
+                                <tr>
+                                    <td>오디오 믹서</td>
+                                    <td>8채널</td>
+                                    <td>32채널</td>
+                                </tr>
+                                <tr>
+                                    <td>그래픽 시스템</td>
+                                    <td>기본</td>
+                                    <td>실시간 3D</td>
+                                </tr>
+                                <tr>
+                                    <td>스트리밍 서버</td>
+                                    <td>1대</td>
+                                    <td>3대 (백업)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="checklist" class="section">
+            <div class="container">
+                <h2>프로덕션 체크리스트</h2>
+                <div class="checklist-container">
+                    <div class="checklist-phase">
+                        <h3>Day 4 준비사항 (전환 준비)</h3>
+                        <div class="checklist-items">
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span>추가 인원 브리핑 및 교육 완료</span>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span>유인 카메라 시스템 테스트</span>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span>스위처 및 오디오 시스템 업그레이드</span>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span>통신 시스템 확장 테스트</span>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span>백업 시스템 점검</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="checklist-phase">
+                        <h3>Day 5 운영사항</h3>
+                        <div class="checklist-items">
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span>05:00 - 추가 크루 집합</span>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span>06:00 - 카메라 포지션 재배치</span>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span>07:00 - 전체 시스템 리허설</span>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span>08:00 - 라이브 방송 준비 완료</span>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span>09:00 - 방송 시작</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dashboard" class="section">
+            <div class="container">
+                <h2>실시간 대시보드</h2>
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <h3>현재 상태</h3>
+                        <div class="status-indicator">
+                            <span class="status-dot active"></span>
+                            <span>준비 중</span>
+                        </div>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3>활성 카메라</h3>
+                        <div class="camera-status">
+                            <span class="camera-count">0</span> / <span class="camera-total">30</span>
+                        </div>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3>크루 현황</h3>
+                        <div class="crew-status">
+                            <span class="crew-count">5</span>명 활동 중
+                        </div>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3>다음 전환</h3>
+                        <div class="next-transition">
+                            Day 5 - <span class="countdown">D-4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 WSOP 방송 프로덕션 가이드. 모든 권리 보유.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
