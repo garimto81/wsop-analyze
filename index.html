@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WSOP 메인 이벤트 방송 프로덕션 가이드</title>
+    <title>WSOP 카메라 프로덕션 운영 분석</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -11,13 +11,13 @@
 <body>
     <header>
         <nav>
-            <div class="logo">WSOP 프로덕션</div>
+            <div class="logo">WSOP 카메라팀 분석</div>
             <ul class="nav-links">
-                <li><a href="#overview">개요</a></li>
-                <li><a href="#daily-analysis">일별 분석</a></li>
-                <li><a href="#production-plan">프로덕션 계획</a></li>
-                <li><a href="#equipment">장비 관리</a></li>
-                <li><a href="#checklist">체크리스트</a></li>
+                <li><a href="#key-findings">핵심 발견</a></li>
+                <li><a href="#camera-strategy">카메라 전략</a></li>
+                <li><a href="#day5-analysis">Day 5 전환</a></li>
+                <li><a href="#crew-planning">인력 계획</a></li>
+                <li><a href="#recommendations">권장사항</a></li>
             </ul>
         </nav>
     </header>
@@ -25,8 +25,8 @@
     <main>
         <section id="hero" class="hero">
             <div class="hero-content">
-                <h1>WSOP 메인 이벤트 방송 프로덕션</h1>
-                <p class="subtitle">효율적인 방송 운영을 위한 종합 가이드</p>
+                <h1>WSOP 메인 이벤트 카메라 프로덕션 분석</h1>
+                <p class="subtitle">과거 운영 데이터 기반 전략적 인사이트</p>
                 <div class="hero-stats">
                     <div class="stat-card">
                         <h3>2025년 참가자</h3>
@@ -44,31 +44,285 @@
             </div>
         </section>
 
-        <section id="overview" class="section">
+        <section id="key-findings" class="section">
             <div class="container">
-                <h2>WSOP 메인 이벤트 개요</h2>
-                <div class="overview-grid">
-                    <div class="overview-card">
-                        <h3>대회 규모</h3>
-                        <p>세계 최대 규모의 포커 토너먼트로, 매년 약 1만명의 참가자가 경쟁합니다.</p>
-                        <div style="position: relative; height: 250px; margin-top: 20px;">
+                <h2>WSOP 프로덕션 핵심 분석 결과</h2>
+                <div class="findings-grid">
+                    <div class="finding-card highlight">
+                        <h3>🔴 결정적 발견</h3>
+                        <p><strong>Day 5가 프로덕션의 분수령</strong></p>
+                        <ul>
+                            <li>참가자 150명 이하로 감소</li>
+                            <li>스토리텔링 중심 방송 전환</li>
+                            <li>프로덕션 규모 4배 증가</li>
+                            <li>시청자 참여도 급상승</li>
+                        </ul>
+                    </div>
+                    <div class="finding-card">
+                        <h3>📊 참가자 감소 패턴</h3>
+                        <div style="position: relative; height: 200px; margin-top: 10px;">
                             <canvas id="participantChart"></canvas>
                         </div>
+                        <p class="chart-note">Day 1: 10,000명 → Day 5: 150명 (98.5% 감소)</p>
                     </div>
-                    <div class="overview-card">
-                        <h3>방송 특징</h3>
-                        <p>Day 1-4: 분산형 무인 카메라 시스템<br>
-                           Day 5-10: 중앙집중형 유인 카메라 시스템</p>
-                    </div>
-                    <div class="overview-card">
-                        <h3>프로덕션 전환점</h3>
-                        <p>Day 5를 기점으로 방송 방식이 근본적으로 변화하며, 인원과 장비를 대폭 증강합니다.</p>
+                    <div class="finding-card">
+                        <h3>🎥 카메라 운영 전략</h3>
+                        <table class="comparison-table">
+                            <tr>
+                                <th>기간</th>
+                                <th>카메라</th>
+                                <th>특징</th>
+                            </tr>
+                            <tr>
+                                <td>Day 1-4</td>
+                                <td>30대 (무인)</td>
+                                <td>기록 중심</td>
+                            </tr>
+                            <tr>
+                                <td>Day 5-10</td>
+                                <td>20대 (유인)</td>
+                                <td>드라마 중심</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="daily-analysis" class="section">
+        <section id="camera-strategy" class="section">
+            <div class="container">
+                <h2>카메라 배치 전략 분석</h2>
+                <div class="strategy-content">
+                    <div class="phase-comparison">
+                        <div class="phase-block">
+                            <h3>📹 Phase 1: Day 1-4 (대규모 운영)</h3>
+                            <div class="strategy-details">
+                                <h4>무인 카메라 시스템</h4>
+                                <ul>
+                                    <li><strong>총 30대</strong> 고정 카메라</li>
+                                    <li>테이블당 1대 배치 (300+ 테이블)</li>
+                                    <li>오버헤드 앵글 중심</li>
+                                    <li>자동 녹화 시스템</li>
+                                </ul>
+                                <h4>운영 특징</h4>
+                                <ul>
+                                    <li>최소 인력 운영 (5명)</li>
+                                    <li>하이라이트 클립 수집</li>
+                                    <li>비용 효율성 극대화</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="phase-block highlight">
+                            <h3>🎬 Phase 2: Day 5-10 (집중 운영)</h3>
+                            <div class="strategy-details">
+                                <h4>유인 카메라 시스템</h4>
+                                <ul>
+                                    <li><strong>15대</strong> 유인 카메라</li>
+                                    <li><strong>5대</strong> 특수 카메라 (크레인, 지미집)</li>
+                                    <li>피처 테이블 집중 커버리지</li>
+                                    <li>실시간 스위칭</li>
+                                </ul>
+                                <h4>운영 특징</h4>
+                                <ul>
+                                    <li>대규모 크루 (20명+)</li>
+                                    <li>라이브 방송 품질</li>
+                                    <li>선수별 스토리 추적</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="insight-box">
+                        <h4>💡 핵심 인사이트</h4>
+                        <p>Day 5의 전환은 단순한 장비 변경이 아닌 <strong>방송 철학의 전환</strong>입니다:</p>
+                        <ul>
+                            <li>객관적 기록 → 주관적 스토리텔링</li>
+                            <li>전체 커버리지 → 선택적 집중</li>
+                            <li>후반 편집 → 실시간 연출</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="day5-analysis" class="section">
+            <div class="container">
+                <h2>Day 5 전환 상세 분석</h2>
+                <div class="transition-analysis">
+                    <div class="critical-factors">
+                        <h3>🔍 Day 5가 전환점인 이유</h3>
+                        <div class="factors-grid">
+                            <div class="factor-card">
+                                <h4>참가자 규모</h4>
+                                <p><strong>150명 이하</strong></p>
+                                <p>관리 가능한 규모로 축소</p>
+                            </div>
+                            <div class="factor-card">
+                                <h4>테이블 수</h4>
+                                <p><strong>15-20 테이블</strong></p>
+                                <p>집중 커버리지 가능</p>
+                            </div>
+                            <div class="factor-card">
+                                <h4>상금 규모</h4>
+                                <p><strong>$50,000+</strong></p>
+                                <p>고액 상금 경쟁 시작</p>
+                            </div>
+                            <div class="factor-card">
+                                <h4>시청자 관심</h4>
+                                <p><strong>급증 시점</strong></p>
+                                <p>스토리 중심 시청</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="transition-timeline">
+                        <h3>📅 Day 4-5 전환 타임라인</h3>
+                        <div class="timeline-table">
+                            <table>
+                                <tr>
+                                    <th>시간</th>
+                                    <th>작업</th>
+                                    <th>담당</th>
+                                    <th>체크포인트</th>
+                                </tr>
+                                <tr>
+                                    <td>Day 4 20:00</td>
+                                    <td>경기 종료 후 현장 평가</td>
+                                    <td>PD</td>
+                                    <td>Day 5 참가자 수 확정</td>
+                                </tr>
+                                <tr>
+                                    <td>Day 4 22:00</td>
+                                    <td>무인 카메라 철수 시작</td>
+                                    <td>기술팀</td>
+                                    <td>20대 유지, 10대 철수</td>
+                                </tr>
+                                <tr>
+                                    <td>Day 5 04:00</td>
+                                    <td>추가 크루 집합</td>
+                                    <td>전체</td>
+                                    <td>15명 추가 인원</td>
+                                </tr>
+                                <tr>
+                                    <td>Day 5 05:00</td>
+                                    <td>유인 카메라 세팅</td>
+                                    <td>카메라팀</td>
+                                    <td>15대 배치 완료</td>
+                                </tr>
+                                <tr>
+                                    <td>Day 5 07:00</td>
+                                    <td>시스템 통합 테스트</td>
+                                    <td>기술팀</td>
+                                    <td>라이브 스위칭 확인</td>
+                                </tr>
+                                <tr>
+                                    <td>Day 5 09:00</td>
+                                    <td>방송 시작</td>
+                                    <td>전체</td>
+                                    <td>새로운 체제 가동</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="crew-planning" class="section">
+            <div class="container">
+                <h2>인력 운영 계획</h2>
+                <div class="crew-planning-content">
+                    <div class="crew-comparison">
+                        <div class="crew-phase">
+                            <h3>Day 1-4 기본 크루 (5명)</h3>
+                            <ul class="crew-list">
+                                <li><strong>PD</strong> (1명) - 전체 총괄</li>
+                                <li><strong>기술 감독</strong> (1명) - 시스템 관리</li>
+                                <li><strong>엔지니어</strong> (2명) - 녹화/모니터링</li>
+                                <li><strong>로거</strong> (1명) - 하이라이트 마킹</li>
+                            </ul>
+                        </div>
+                        <div class="crew-phase highlight">
+                            <h3>Day 5-10 확장 크루 (20명+)</h3>
+                            <div class="crew-breakdown">
+                                <h4>방송팀 (8명)</h4>
+                                <ul>
+                                    <li>PD (1명), 조연출 (2명)</li>
+                                    <li>스위처 (2명), VJ (3명)</li>
+                                </ul>
+                                <h4>카메라팀 (8명)</h4>
+                                <ul>
+                                    <li>카메라 감독 (1명)</li>
+                                    <li>카메라맨 (7명)</li>
+                                </ul>
+                                <h4>기술팀 (4명+)</h4>
+                                <ul>
+                                    <li>기술 감독 (1명)</li>
+                                    <li>오디오 (1명)</li>
+                                    <li>그래픽 (1명)</li>
+                                    <li>스트리밍 (1명)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cost-analysis">
+                        <h3>💰 비용 효율성 분석</h3>
+                        <div class="cost-breakdown">
+                            <p><strong>Day 1-4:</strong> 일일 $5,000 (인건비 + 장비)</p>
+                            <p><strong>Day 5-10:</strong> 일일 $25,000 (5배 증가)</p>
+                            <p><strong>ROI 근거:</strong> Day 5부터 시청률 300% 상승, 광고 수익 증가</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="recommendations" class="section">
+            <div class="container">
+                <h2>우리 프로덕션을 위한 권장사항</h2>
+                <div class="recommendations-grid">
+                    <div class="recommendation-card">
+                        <h3>1️⃣ 단계적 전환 전략</h3>
+                        <ul>
+                            <li>Day 4 저녁: 참가자 수 모니터링</li>
+                            <li>200명 이하 시점에서 전환 준비</li>
+                            <li>150명 도달 시 완전 전환</li>
+                        </ul>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>2️⃣ 하이브리드 운영</h3>
+                        <ul>
+                            <li>핵심 테이블: 유인 카메라</li>
+                            <li>보조 테이블: 무인 카메라 유지</li>
+                            <li>비용 절감 + 품질 확보</li>
+                        </ul>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>3️⃣ 크루 탄력 운영</h3>
+                        <ul>
+                            <li>코어팀: 상시 운영 (8명)</li>
+                            <li>서포트팀: Day 5부터 투입</li>
+                            <li>프리랜서 활용으로 비용 최적화</li>
+                        </ul>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>4️⃣ 기술 투자 우선순위</h3>
+                        <ul>
+                            <li>1순위: 라이브 스위칭 시스템</li>
+                            <li>2순위: 무선 카메라 시스템</li>
+                            <li>3순위: 실시간 그래픽 시스템</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="final-insight">
+                    <h3>🎯 핵심 결론</h3>
+                    <p>WSOP 프로덕션의 성공은 <strong>"Day 5 전환"</strong>의 타이밍과 규모에 달려 있습니다. 
+                    과도한 초기 투자보다는 <strong>전략적 자원 배분</strong>으로 효율성과 품질을 동시에 확보하는 것이 핵심입니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 기존 섹션들 제거 -->
+        <!--
             <div class="container">
                 <h2>일별 참가자 분석</h2>
                 <div class="daily-timeline">
@@ -170,8 +424,9 @@
                 </div>
             </div>
         </section>
+        -->
 
-        <section id="production-plan" class="section">
+        <!--
             <div class="container">
                 <h2>프로덕션 운영 계획</h2>
                 <div class="production-grid">
@@ -218,8 +473,9 @@
                 </div>
             </div>
         </section>
+        -->
 
-        <section id="equipment" class="section">
+        <!--
             <div class="container">
                 <h2>장비 관리 계획</h2>
                 <div class="equipment-grid">
@@ -294,8 +550,9 @@
                 </div>
             </div>
         </section>
+        -->
 
-        <section id="checklist" class="section">
+        <!--
             <div class="container">
                 <h2>프로덕션 체크리스트</h2>
                 <div class="checklist-container">
@@ -352,8 +609,9 @@
                 </div>
             </div>
         </section>
+        -->
 
-        <section id="dashboard" class="section">
+        <!--
             <div class="container">
                 <h2>실시간 대시보드</h2>
                 <div class="dashboard-grid">
@@ -385,11 +643,12 @@
                 </div>
             </div>
         </section>
+        -->
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 WSOP 방송 프로덕션 가이드. 모든 권리 보유.</p>
+            <p>&copy; 2025 WSOP 카메라 프로덕션 분석. 카메라팀을 위한 전략적 인사이트.</p>
         </div>
     </footer>
 

@@ -5,15 +5,27 @@ document.addEventListener('DOMContentLoaded', function() {
         const participantChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['2021', '2022', '2023', '2024', '2025'],
+            labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6-9', 'Day 10'],
             datasets: [{
                 label: '참가자 수',
-                data: [6650, 8663, 10043, 10112, 9735],
+                data: [10000, 5000, 1500, 500, 150, 50, 9],
                 borderColor: '#3498db',
                 backgroundColor: 'rgba(52, 152, 219, 0.1)',
                 tension: 0.4,
                 pointRadius: 5,
-                pointHoverRadius: 7
+                pointHoverRadius: 7,
+                pointBackgroundColor: function(context) {
+                    const index = context.dataIndex;
+                    return index === 4 ? '#e74c3c' : '#3498db'; // Day 5를 빨간색으로
+                },
+                pointBorderColor: function(context) {
+                    const index = context.dataIndex;
+                    return index === 4 ? '#e74c3c' : '#3498db';
+                },
+                pointBorderWidth: function(context) {
+                    const index = context.dataIndex;
+                    return index === 4 ? 3 : 2;
+                }
             }]
         },
         options: {
@@ -26,10 +38,30 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             scales: {
                 y: {
+                    type: 'logarithmic',
                     beginAtZero: false,
                     ticks: {
                         callback: function(value) {
                             return value.toLocaleString() + '명';
+                        }
+                    }
+                }
+            },
+            plugins: {
+                annotation: {
+                    annotations: {
+                        line1: {
+                            type: 'line',
+                            xMin: 4,
+                            xMax: 4,
+                            borderColor: 'rgb(255, 99, 132)',
+                            borderWidth: 2,
+                            borderDash: [5, 5],
+                            label: {
+                                enabled: true,
+                                content: 'Day 5 전환점',
+                                position: 'start'
+                            }
                         }
                     }
                 }
@@ -68,43 +100,7 @@ checkboxes.forEach((checkbox, index) => {
     });
 });
 
-// 실시간 대시보드 업데이트 시뮬레이션
-function updateDashboard() {
-    // 현재 날짜 기준으로 Day 계산 (데모용)
-    const now = new Date();
-    const startDate = new Date('2025-07-01'); // 가상의 대회 시작일
-    const daysDiff = Math.floor((now - startDate) / (1000 * 60 * 60 * 24));
-    
-    let currentDay = Math.min(Math.max(1, daysDiff + 1), 10);
-    
-    // 카메라 상태 업데이트
-    const cameraCount = document.querySelector('.camera-count');
-    const cameraTotal = document.querySelector('.camera-total');
-    if (currentDay < 5) {
-        cameraCount.textContent = '30';
-        cameraTotal.textContent = '30';
-    } else {
-        cameraCount.textContent = '20';
-        cameraTotal.textContent = '20';
-    }
-    
-    // 크루 상태 업데이트
-    const crewCount = document.querySelector('.crew-count');
-    crewCount.textContent = currentDay < 5 ? '5' : '20';
-    
-    // 카운트다운 업데이트
-    const countdown = document.querySelector('.countdown');
-    if (currentDay < 5) {
-        countdown.textContent = `D-${5 - currentDay}`;
-    } else {
-        countdown.textContent = '진행 중';
-    }
-}
-
-// DOM 로드 후 대시보드 업데이트
-document.addEventListener('DOMContentLoaded', function() {
-    updateDashboard();
-});
+// 페이지 로드 완료 이벤트
 
 // 타임라인 애니메이션
 document.addEventListener('DOMContentLoaded', function() {
